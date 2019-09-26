@@ -1,0 +1,12 @@
+[
+  {
+    "id": "about",
+    "title": "Tentang Aplikasi",
+    "content": "assets/txt/about.txt"
+  },
+  {
+    "id": "tutorial",
+    "title": "Cara Penggunaan Aplikasi",
+    "content": "assets/txt/tutorial.txt"
+  }
+]

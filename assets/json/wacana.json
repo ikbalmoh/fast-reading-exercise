@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "title": "Wacana 1",
+    "jenis": "sd",
+    "total": 850,
+    "content": "assets/txt/wacana.txt"
+  },
+  {
+    "id": 2,
+    "title": "Wacana 2",
+    "jenis": "sd",
+    "total": 950,
+    "content": "assets/txt/wacana.txt"
+  },
+  {
+    "id": 3,
+    "title": "Wacana 1",
+    "jenis": "smp",
+    "total": 1100,
+    "content": "assets/txt/wacana.txt"
+  }
+]

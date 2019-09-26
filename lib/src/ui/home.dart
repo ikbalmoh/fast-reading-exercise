@@ -19,16 +19,20 @@ class _HomeState extends State<Home> {
                 color: Color(0xFF03A9F4),
               ),
               height: 250,
+              child: Opacity(
+                opacity: 0.3,
+                child: Stack(
+                  children: <Widget>[
+                    Positioned(
+                      child: Image.asset('assets/images/airplane.png', height: 250,),
+                      top: -10,
+                      right: -20,
+                    )
+                  ],
+                )
+              ),
             ),
             clipper: BottomWaveClipper(),
-          ),
-          Positioned(
-            top: 10,
-            right: -10,
-            child: Opacity(
-              child: Image.asset('assets/airplane.png', height: 250,),
-              opacity: 0.3,
-            ),
           ),
           SafeArea(
             child: Container(
@@ -45,7 +49,7 @@ class _HomeState extends State<Home> {
                         textAlign: TextAlign.left,
                         style: textTheme.headline.copyWith(color: Colors.white, fontWeight: FontWeight.bold),
                       ),
-                      constraints: BoxConstraints(maxWidth: MediaQuery.of(context).size.width - 200),
+                      constraints: BoxConstraints(maxWidth: MediaQuery.of(context).size.width * (3/4)),
                     ),
                   ),
                   SizedBox(height: 30,),
@@ -56,10 +60,10 @@ class _HomeState extends State<Home> {
                       shrinkWrap: true,
                       crossAxisCount: 2,
                       children: <Widget>[
-                        new GridItem(name: 'Tes Kecepatan Membaca', image: 'assets/airplane.png'),
-                        new GridItem(name: 'hasil Tes', image: 'assets/hotel.png'),
-                        new GridItem(name: 'Tentang Membaca Cepat', image: 'assets/bus.png'),
-                        new GridItem(name: 'Cara Penggunaan', image: 'assets/sma.png'),
+                        new GridItem(name: 'Tes Kecepatan Membaca', image: 'assets/images/airplane.png', url: 'select-school',),
+                        new GridItem(name: 'Hasil Tes', image: 'assets/images/hotel.png', url: 'about/about'),
+                        new GridItem(name: 'Tentang Membaca Cepat', image: 'assets/images/bus.png', url: 'about/about'),
+                        new GridItem(name: 'Cara Penggunaan', image: 'assets/images/sma.png', url: 'about/tutorial'),
                       ],
                     ),
                   )
@@ -74,10 +78,11 @@ class _HomeState extends State<Home> {
 }
 
 class GridItem extends StatelessWidget {
-  final String name, image;
+  final String name, image, url;
   const GridItem({
     @required this.name,
     @required this.image,
+    @required this.url,
     Key key,
   }) : super(key: key);
 
@@ -90,7 +95,7 @@ class GridItem extends StatelessWidget {
         elevation: 6,
         child: InkWell(
           borderRadius: BorderRadius.circular(15),
-          onTap: () => Navigator.pushNamed(context, 'select-school'),
+          onTap: () => Navigator.pushNamed(context, url),
           child: Padding(
             padding: const EdgeInsets.all(10),
             child: Column(

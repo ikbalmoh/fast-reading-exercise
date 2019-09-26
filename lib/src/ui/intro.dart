@@ -12,8 +12,6 @@ class _IntroState extends State<Intro> {
   final pages = [
     PageViewModel(
       pageColor: const Color(0xFF03A9F4),
-      // iconImageAssetPath: 'assets/air-hostess.png',
-      bubble: Image.asset('assets/air-hostess.png'),
       body: Text(
         'Haselfree  booking  of  flight  tickets  with  full  refund  on  cancelation',
       ),
@@ -22,21 +20,20 @@ class _IntroState extends State<Intro> {
       ),
       textStyle: TextStyle(color: Colors.white),
       mainImage: Image.asset(
-        'assets/airplane.png',
+        'assets/images/airplane.png',
         height: 285.0,
         width: 285.0,
         alignment: Alignment.center,
       )
     ),
     PageViewModel(
-      pageColor: const Color(0xFF8BC34A),
-      iconImageAssetPath: 'assets/waiter.png',
+      pageColor: const Color(0xFF03A9F4),
       body: Text(
         'We  work  for  the  comfort ,  enjoy  your  stay  at  our  beautiful  hotels',
       ),
       title: Text('Hotels'),
       mainImage: Image.asset(
-        'assets/hotel.png',
+        'assets/images/hotel.png',
         height: 285.0,
         width: 285.0,
         alignment: Alignment.center,
@@ -44,14 +41,13 @@ class _IntroState extends State<Intro> {
       textStyle: TextStyle(color: Colors.white),
     ),
     PageViewModel(
-      pageColor: const Color(0xFF607D8B),
-      iconImageAssetPath: 'assets/taxi-driver.png',
+      pageColor: const Color(0xFF03A9F4),
       body: Text(
         'Easy  cab  booking  at  your  doorstep  with  cashless  payment  system',
       ),
       title: Text('Cabs'),
       mainImage: Image.asset(
-        'assets/taxi.png',
+        'assets/images/taxi.png',
         height: 285.0,
         width: 285.0,
         alignment: Alignment.center,
@@ -69,11 +65,13 @@ class _IntroState extends State<Intro> {
   Widget build(BuildContext context) {
     return IntroViewsFlutter(
       pages,
-      onTapDoneButton: () => Navigator.pushNamed(context, 'home'),
+      onTapDoneButton: () => Navigator.pushReplacementNamed(context, 'home'),
       pageButtonTextStyles: TextStyle(
         color: Colors.white,
         fontSize: 18.0,
-      )
+      ),
+      doneText: Text('OK'),
+      skipText: Text('LEWAT'),
     );
   }
 }

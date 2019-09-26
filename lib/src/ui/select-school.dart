@@ -19,16 +19,20 @@ class _SelectSchoolState extends State<SelectSchool> {
                 color: Color(0xFF03A9F4),
               ),
               height: 300,
+              child: Opacity(
+                opacity: 0.3,
+                child: Stack(
+                  children: <Widget>[
+                    Positioned(
+                      child: Image.asset('assets/images/school.png', height: 250,),
+                      bottom: 0,
+                      right: -80,
+                    )
+                  ],
+                )
+              ),
             ),
             clipper: BottomWaveClipper(),
-          ),
-          Positioned(
-            top: -10,
-            right: -80,
-            child: Opacity(
-              child: Image.asset('assets/school.png', height: 200,),
-              opacity: 0.8,
-            )
           ),
           AppBar(
             backgroundColor: Colors.transparent,
@@ -59,10 +63,10 @@ class _SelectSchoolState extends State<SelectSchool> {
                       shrinkWrap: true,
                       crossAxisCount: 2,
                       children: <Widget>[
-                        new GridItem(name: 'SD/MI', image: 'assets/sd.png'),
-                        new GridItem(name: 'SMP/MTS', image: 'assets/smp.png'),
-                        new GridItem(name: 'SMA/MA', image: 'assets/sma.png'),
-                        new GridItem(name: 'MAHASISWA', image: 'assets/university.png'),
+                        new GridItem(name: 'SD/MI', image: 'assets/images/sd.png', type: 'sd'),
+                        new GridItem(name: 'SMP/MTS', image: 'assets/images/smp.png', type: 'smp'),
+                        new GridItem(name: 'SMA/MA', image: 'assets/images/sma.png', type: 'sma'),
+                        new GridItem(name: 'MAHASISWA', image: 'assets/images/university.png', type: 'mahasiswa'),
                       ],
                     ),
                   )
@@ -77,10 +81,11 @@ class _SelectSchoolState extends State<SelectSchool> {
 }
 
 class GridItem extends StatelessWidget {
-  final String name, image;
+  final String name, image, type;
   const GridItem({
     @required this.name,
     @required this.image,
+    @required this.type,
     Key key,
   }) : super(key: key);
 
@@ -93,7 +98,7 @@ class GridItem extends StatelessWidget {
         elevation: 6,
         child: InkWell(
           borderRadius: BorderRadius.circular(15),
-          onTap: () => Navigator.pushNamed(context, 'select-subject'),
+          onTap: () => Navigator.pushNamed(context, 'select-subject/$type'),
           child: Padding(
             padding: const EdgeInsets.all(10),
             child: Column(

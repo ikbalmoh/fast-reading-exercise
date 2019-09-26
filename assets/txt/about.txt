@@ -1,0 +1,4 @@
+Aplikasi Membaca Pemahaman merupakan salah satu inovasi media pembelajaran bahasa yang berisi tentang simulasi keterampilan membaca pemahaman.
+Di dalam aplikasi ini terdapat berberapa teks wacana bermuatan kearifan lokal yang terdiri dari teks deskripsi, eksposisi, persuasi dan narasi sesuai dengan jenjang pendidikan dasar hingga perguruan tinggi.
+Pengguna kemudian akan diberikan waktu pada proses membaca, di mana waktu tersebut akan dikonversikan menjadi skor berupa angka untuk mengetahui Kemampuan Membaca Cepat.
+Pada proses pemahaman pengguna diberikan beberapa soal terkait dengan teks wacana yang dibaca, hasilnya kemudian akan dijumlahkan dengan skor Kemampuan Membaca Cepat. Hasil akhir inilah yang akan menjadi skor Kemampuan Efektif Membaca.
