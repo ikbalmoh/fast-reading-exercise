@@ -107,7 +107,7 @@ class GridItem extends StatelessWidget {
                   child: Image.asset(image),
                 ),
                 SizedBox(height: 10,),
-                Text(name, style: Theme.of(context).textTheme.title.copyWith(fontWeight: FontWeight.bold, color: Colors.blueGrey[700]),)
+                Text(name, style: Theme.of(context).textTheme.subtitle.copyWith(fontWeight: FontWeight.bold, color: Colors.blueGrey[700]),)
               ],
             ),
           ),

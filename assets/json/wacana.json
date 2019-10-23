@@ -4,20 +4,23 @@
     "title": "Wacana 1",
     "jenis": "sd",
     "total": 850,
-    "content": "assets/txt/wacana.txt"
+    "content": "assets/txt/wacana.txt",
+    "exam": "assets/json/exam/example.json"
   },
   {
-    "id": 2,
+    "id": 2, 
     "title": "Wacana 2",
     "jenis": "sd",
     "total": 950,
-    "content": "assets/txt/wacana.txt"
+    "content": "assets/txt/wacana.txt" ,
+    "exam": "assets/json/exam/example.json"
   },
   {
     "id": 3,
     "title": "Wacana 1",
     "jenis": "smp",
     "total": 1100,
-    "content": "assets/txt/wacana.txt"
+    "content": "assets/txt/wacana.txt",
+    "exam": "assets/json/exam/example.json"
   }
 ]

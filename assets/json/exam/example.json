@@ -1,0 +1,22 @@
+[
+  {
+    "soal": "Siapakah aktor yang memerankan gundala?",
+    "options": {
+      "a": "Teuku Wisnu",
+      "b": "Mandra",
+      "c": "Abimana",
+      "d": "Ciko"
+    },
+    "answer": "c"
+  },
+  {
+    "soal": "Siapakah produser gundala?",
+    "options": {
+      "a": "Livi Jeng",
+      "b": "Joko Anwar",
+      "c": "Hanum",
+      "d": "Tukang Cilok"
+    },
+    "answer": "b"
+  }
+]
